@@ -318,7 +318,7 @@ O **FlowHub** é uma solução desenvolvida para gerenciar equipamentos (champan
 ### 1. Clone o Repositório
 
 ```bash
-git clone <url-do-repositorio>
+git clone https://github.com/taiuanpagini/flowhub
 cd FlowHub
 ```
 
