@@ -662,14 +662,14 @@ const connection = new HubConnectionBuilder()
 ### 1. Configurar Base de Dados
 
 1. Faça login como **Admin** (`admin` / `123456`)
-2. Na aba "Customers", clique em **"Limpar Todos"** (se houver dados)
+2. Na aba "Clientes", clique em **"Limpar Todos"** (se houver dados)
 3. Clique em **"Gerar 3 Clientes"**
-4. Na aba "Equipments", clique em **"Limpar Todos"** (se houver dados)
+4. Na aba "Equipamentos", clique em **"Limpar Todos"** (se houver dados)
 5. Clique em **"Gerar Equipamentos"**:
-   - Selecione **Champagne**
+   - Selecione **Champanheira**
    - Quantidade: **10**
    - Clique em **"Gerar"**
-6. Repita o passo 5 para **Spittoon** (Cuspideira)
+6. Repita o passo 5 para **Cuspideira**
 
 ### 2. Visualizar QR Codes
 
@@ -754,30 +754,12 @@ O sistema utiliza uma paleta personalizada focada em elegância e profissionalis
 - [ ] Animações e transições
 - [ ] Tutorial interativo (onboarding)
 - [ ] Acessibilidade (WCAG 2.1)
-- [ ] PWA (Progressive Web App)
-- [ ] Suporte offline
-
----
-
-## 📝 Licença
-
-Este projeto é um POC (Proof of Concept) desenvolvido para fins de demonstração.
 
 ---
 
 ## 👨‍💻 Autor
 
-Desenvolvido como parte de um projeto de POC para gestão de equipamentos em eventos.
-
----
-
-## 📞 Suporte
-
-Para dúvidas ou problemas:
-1. Verifique a documentação acima
-2. Consulte os logs do backend e frontend
-3. Verifique se as portas 5024 e 5173 estão disponíveis
-4. Certifique-se de que as dependências foram instaladas corretamente
+Taiuan Pagini
 
 ---
 
