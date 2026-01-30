@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
-using ProWine.POC.API.Models;
-using ProWine.POC.API.Services;
+using FlowHub.API.Models;
+using FlowHub.API.Services;
 using System.Text;
 
-namespace ProWine.POC.API.Controllers;
+namespace FlowHub.API.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]

@@ -1,7 +1,7 @@
 using System.Text.Json;
-using ProWine.POC.API.Models;
+using FlowHub.API.Models;
 
-namespace ProWine.POC.API.Services;
+namespace FlowHub.API.Services;
 
 public class MockDataService
 {

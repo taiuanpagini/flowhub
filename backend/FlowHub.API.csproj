@@ -4,6 +4,8 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>FlowHub.API</AssemblyName>
+    <RootNamespace>FlowHub.API</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

@@ -1,10 +1,10 @@
-# Pro Wine - Apresentação para Cliente
+# FlowHub - Apresentação para Cliente
 
 ## Visão Geral
 
 Sistema completo para gestão de locação de taças e equipamentos em feiras de vinho, oferecendo controle em tempo real, automação de processos e experiência otimizada para todos os envolvidos.
 
-### O que o Pro Wine Resolve?
+### O que o FlowHub Resolve?
 
 - ✅ Controle automatizado de compras de kits (integração com KS/WSP)
 - ✅ Gestão de retirada e devolução de equipamentos (champanheiras e cuspideiras)
@@ -22,7 +22,7 @@ Sistema completo para gestão de locação de taças e equipamentos em feiras de
 
 ### 1. Expositor (Cliente da Feira)
 
-**Quem é:** Empresas vinícolas que expõem seus produtos na feira Pro Wine.
+**Quem é:** Empresas vinícolas que expõem seus produtos na feira FlowHub.
 
 **O que compra:** Kits de serviço (1 kit = 25 taças + 1 champanheira + 1 cuspideira)
 
@@ -30,7 +30,7 @@ Sistema completo para gestão de locação de taças e equipamentos em feiras de
 
 ```mermaid
 journey
-    title Jornada do Expositor no Pro Wine
+    title Jornada do Expositor no FlowHub
     section Antes da Feira
       Compra kits via KS/WSP: 5: Expositor
       Recebe crachá com QRCode: 5: Expositor
@@ -240,7 +240,7 @@ graph LR
 
 ```mermaid
 journey
-    title Jornada do Administrador no Pro Wine
+    title Jornada do Administrador no FlowHub
     section Preparacao PreFeira
       Cria novo evento no sistema: 5: Admin
       Configura parametros da feira: 5: Admin
@@ -441,7 +441,7 @@ graph TB
 
 ## Benefícios Gerais do Sistema
 
-### Para o Negócio Pro Wine
+### Para o Negócio FlowHub
 
 - 💰 **Receita Garantida**: Controle automático de multas por não devolução
 - 📊 **Dados Estratégicos**: Relatórios completos para decisões futuras
@@ -537,4 +537,4 @@ Para mais informações ou demonstração:
 
 ---
 
-**Pro Wine** - Transformando a gestão de eventos vitivinícolas com tecnologia e inovação.
+**FlowHub** - Transformando a gestão de eventos vitivinícolas com tecnologia e inovação.

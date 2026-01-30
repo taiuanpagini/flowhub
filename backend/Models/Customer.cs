@@ -1,4 +1,4 @@
-namespace ProWine.POC.API.Models;
+namespace FlowHub.API.Models;
 
 public class Customer
 {

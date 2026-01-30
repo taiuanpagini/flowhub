@@ -1,6 +1,6 @@
 ---
-name: Pro Wine POC
-overview: Desenvolver uma Proof of Concept (POC) do Pro Wine com 4 interfaces funcionais (Expositor, Operador, Cozinha, Administrador), dados mockados, autenticação simplificada e foco em demonstração visual das funcionalidades principais.
+name: FlowHub POC
+overview: Desenvolver uma Proof of Concept (POC) do FlowHub com 4 interfaces funcionais (Expositor, Operador, Cozinha, Administrador), dados mockados, autenticação simplificada e foco em demonstração visual das funcionalidades principais.
 todos:
   - id: poc_setup
     content: "Setup inicial: criar projetos backend (.NET 8) e frontend React (Vite + TailwindCSS), configurar Git"
@@ -35,11 +35,11 @@ todos:
 isProject: false
 ---
 
-# Pro Wine - Plano POC (Proof of Concept)
+# FlowHub - Plano POC (Proof of Concept)
 
 ## Objetivo
 
-Criar uma versão demonstrativa do Pro Wine para validação do cliente, focada em **experiência visual e fluxos principais**, sem complexidade de integrações e infraestrutura completa.
+Criar uma versão demonstrativa do FlowHub para validação do cliente, focada em **experiência visual e fluxos principais**, sem complexidade de integrações e infraestrutura completa.
 
 ---
 
@@ -56,7 +56,7 @@ Criar uma versão demonstrativa do Pro Wine para validação do cliente, focada 
 
 **✅ Dados Mockados:**
 
-- 1 evento pré-configurado (Pro Wine 2026)
+- 1 evento pré-configurado (FlowHub 2026)
 - 10-15 clientes fictícios com kits comprados
 - 50 equipamentos (champanheiras/cuspideiras) com QRCodes
 - 20-30 solicitações de reposição em diferentes status
@@ -154,7 +154,7 @@ graph TB
   "events": [
     {
       "id": "evt-001",
-      "name": "Pro Wine 2026",
+      "name": "FlowHub 2026",
       "code": "PW2026",
       "startDate": "2026-03-15",
       "endDate": "2026-03-18",
@@ -215,7 +215,7 @@ graph TB
       "username": "operador",
       "password": "123456",
       "name": "Maria Santos",
-      "email": "maria.santos@prowine.com",
+      "email": "maria.santos@FlowHub.com",
       "role": "Operador",
       "permissions": ["scan_qrcode", "register_pickup", "register_return"],
       "redirectTo": "/operador/scanner"
@@ -225,7 +225,7 @@ graph TB
       "username": "supervisor",
       "password": "123456",
       "name": "Carlos Pereira",
-      "email": "carlos.pereira@prowine.com",
+      "email": "carlos.pereira@FlowHub.com",
       "role": "Supervisor_Cozinha",
       "permissions": ["view_all_requests", "assign_waiter", "manage_kitchen"],
       "redirectTo": "/cozinha/painel"
@@ -235,7 +235,7 @@ graph TB
       "username": "garcom",
       "password": "123456",
       "name": "Ana Costa",
-      "email": "ana.costa@prowine.com",
+      "email": "ana.costa@FlowHub.com",
       "role": "Garcom",
       "permissions": ["view_my_requests", "update_request_status"],
       "redirectTo": "/cozinha/minhas-solicitacoes"
@@ -245,7 +245,7 @@ graph TB
       "username": "admin",
       "password": "123456",
       "name": "Roberto Admin",
-      "email": "roberto.admin@prowine.com",
+      "email": "roberto.admin@FlowHub.com",
       "role": "Administrador",
       "permissions": ["manage_events", "manage_customers", "manage_equipments", "manage_users", "generate_labels"],
       "redirectTo": "/admin/dashboard"
@@ -327,7 +327,7 @@ sequenceDiagram
 
 **Tela Única de Login**
 
-- Logo Pro Wine
+- Logo FlowHub
 - Campos: Username e Senha
 - Seletor de idioma (PT/EN) no canto superior direito
 - Botão "Entrar"
@@ -568,16 +568,16 @@ Cada aba redireciona automaticamente para o módulo correto.
 ## 7. Estrutura de Projeto POC
 
 ```
-ProWine.POC/
+FlowHub.POC/
 ├── backend/
-│   ├── ProWine.POC.API/
+│   ├── FlowHub.POC.API/
 │   │   ├── Controllers/
 │   │   │   ├── CustomersController.cs
 │   │   │   ├── EquipmentsController.cs
 │   │   │   ├── ServiceRequestsController.cs
 │   │   │   └── LabelsController.cs
 │   │   ├── Hubs/
-│   │   │   └── ProWineHub.cs
+│   │   │   └── FlowHubHub.cs
 │   │   ├── Models/
 │   │   │   └── (DTOs mockados)
 │   │   ├── Services/
@@ -586,7 +586,7 @@ ProWine.POC/
 │   │   │   └── LabelService.cs
 │   │   └── Data/
 │   │       └── mock-data.json
-│   └── ProWine.POC.API.csproj
+│   └── FlowHub.POC.API.csproj
 │
 ├── frontend/
 │   ├── src/
@@ -659,9 +659,9 @@ ProWine.POC/
 
 ```bash
 # Criar projeto com Vite
-npm create vite@latest prowine-poc-frontend -- --template react
+npm create vite@latest FlowHub-poc-frontend -- --template react
 
-cd prowine-poc-frontend
+cd FlowHub-poc-frontend
 
 # Instalar dependências principais
 npm install
@@ -880,7 +880,7 @@ export default function Login() {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-900 to-purple-600">
       <div className="bg-white p-8 rounded-lg shadow-2xl w-96">
         <div className="text-center mb-6">
-          <h1 className="text-3xl font-bold text-purple-900">Pro Wine</h1>
+          <h1 className="text-3xl font-bold text-purple-900">FlowHub</h1>
           <p className="text-gray-600 mt-2">{t('login.subtitle')}</p>
         </div>
 

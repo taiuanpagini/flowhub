@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.SignalR;
 
-namespace ProWine.POC.API.Hubs;
+namespace FlowHub.API.Hubs;
 
-public class ProWineHub : Hub
+public class FlowHubHub : Hub
 {
     public override async Task OnConnectedAsync()
     {

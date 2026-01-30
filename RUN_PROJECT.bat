@@ -2,7 +2,7 @@
 chcp 65001 > nul
 echo.
 echo ========================================
-echo   Pro Wine POC - Iniciando Projeto
+echo   FlowHub - Iniciando Projeto
 echo ========================================
 echo.
 echo [1/2] Iniciando Backend (.NET 8)...

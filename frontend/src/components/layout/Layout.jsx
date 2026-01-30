@@ -49,7 +49,7 @@ export default function Layout({ children }) {
               fontSize: { xs: '1.1rem', sm: '1.25rem', md: '1.5rem' },
             }}
           >
-            🍷 {t('common.appName')}
+            🚀 {t('common.appName')}
           </Typography>
           
           <Box sx={{ display: 'flex', alignItems: 'center', gap: { xs: 0.5, sm: 1, md: 2 } }}>
@@ -148,7 +148,7 @@ export default function Layout({ children }) {
         }}
       >
         <Typography variant="body2" color="text.secondary" align="center" sx={{ fontSize: { xs: '0.75rem', sm: '0.875rem' } }}>
-          Pro Wine POC © 2026
+          FlowHub © 2026
         </Typography>
       </Box>
     </Box>

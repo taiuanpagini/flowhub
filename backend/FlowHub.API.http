@@ -1,0 +1,19 @@
+@FlowHub_API_HostAddress = http://localhost:5024
+
+GET {{FlowHub_API_HostAddress}}/api/customers/
+Accept: application/json
+
+###
+
+GET {{FlowHub_API_HostAddress}}/api/equipments/
+Accept: application/json
+
+###
+
+POST {{FlowHub_API_HostAddress}}/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "123456"
+}

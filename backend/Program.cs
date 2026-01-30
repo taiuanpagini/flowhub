@@ -1,5 +1,5 @@
-using ProWine.POC.API.Hubs;
-using ProWine.POC.API.Services;
+using FlowHub.API.Hubs;
+using FlowHub.API.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -44,6 +44,6 @@ app.UseAuthorization();
 app.MapControllers();
 
 // Map SignalR Hub
-app.MapHub<ProWineHub>("/hubs/prowine");
+app.MapHub<FlowHubHub>("/hubs/flowhub");
 
 app.Run();

@@ -1,5 +1,5 @@
 ---
-name: Pro Wine Solution Design
+name: FlowHub Solution Design
 overview: Sistema de gestão de locação de taças e equipamentos para feiras de vinho com controle de retirada, devolução, solicitações em tempo real via PWA e integração com sistema de vendas (KS/WSP).
 todos:
   - id: requirements_doc
@@ -18,7 +18,7 @@ todos:
     content: Provisionar recursos Azure (App Service, Functions, Redis, Service Bus)
     status: pending
   - id: setup_keycloak
-    content: Configurar KeyCloak com realms, clients e permissões do Pro Wine
+    content: Configurar KeyCloak com realms, clients e permissões do FlowHub
     status: pending
   - id: project_scaffolding
     content: Criar estrutura de projetos .NET seguindo arquitetura em camadas
@@ -36,7 +36,7 @@ todos:
     content: Implementar controllers com BaseController + OData
     status: pending
   - id: implement_signalr
-    content: Implementar ProWineHub e sistema de notificações em tempo real
+    content: Implementar FlowHubHub e sistema de notificações em tempo real
     status: pending
   - id: implement_integration
     content: Implementar serviço de integração KS/WSP + Azure Function de sincronização
@@ -77,7 +77,7 @@ todos:
 isProject: false
 ---
 
-# Pro Wine - Desenho de Solução
+# FlowHub - Desenho de Solução
 
 ## 1. Visão Geral da Arquitetura
 
@@ -140,30 +140,30 @@ graph TB
 
 ## 2. Estrutura do Projeto (.NET)
 
-Seguindo o padrão existente, criar nova solution `Mafra.ProWine`:
+Seguindo o padrão existente, criar nova solution `Mafra.FlowHub`:
 
 ```
-Mafra.ProWine/
+Mafra.FlowHub/
 ├── 0.Utilities/
-│   └── Mafra.ProWine.Utilities/          # Enums, extensions, helpers
+│   └── Mafra.FlowHub.Utilities/          # Enums, extensions, helpers
 ├── 1.Presentation/
-│   ├── Mafra.ProWine.API/                # Web API principal
-│   └── Mafra.ProWine.SignalR/            # Hub de notificações
+│   ├── Mafra.FlowHub.API/                # Web API principal
+│   └── Mafra.FlowHub.SignalR/            # Hub de notificações
 ├── 2.Domain/
-│   └── Mafra.ProWine.Domain/             # Entidades, interfaces, DTOs
+│   └── Mafra.FlowHub.Domain/             # Entidades, interfaces, DTOs
 ├── 3.Infra/
-│   ├── Mafra.ProWine.Infra.Mongo/        # Repositórios MongoDB
-│   ├── Mafra.ProWine.Infra.RedisCache/   # Cache distribuído
-│   └── Mafra.ProWine.Infra.Integration/  # Integração KS/WSP
+│   ├── Mafra.FlowHub.Infra.Mongo/        # Repositórios MongoDB
+│   ├── Mafra.FlowHub.Infra.RedisCache/   # Cache distribuído
+│   └── Mafra.FlowHub.Infra.Integration/  # Integração KS/WSP
 ├── 4.Service/
-│   └── Mafra.ProWine.Service/            # Lógica de negócio
+│   └── Mafra.FlowHub.Service/            # Lógica de negócio
 ├── 5.Tests/
-│   ├── Mafra.ProWine.UnitTests/
-│   └── Mafra.ProWine.IntegrationTests/
+│   ├── Mafra.FlowHub.UnitTests/
+│   └── Mafra.FlowHub.IntegrationTests/
 ├── 6.Localization/
-│   └── Mafra.ProWine.Localization/       # pt-BR, en-US
+│   └── Mafra.FlowHub.Localization/       # pt-BR, en-US
 └── 7.Functions/
-    └── Mafra.ProWine.Functions/          # Azure Functions (sync KS/WSP)
+    └── Mafra.FlowHub.Functions/          # Azure Functions (sync KS/WSP)
 ```
 
 ## 3. Modelo de Domínio (Entidades Principais)
@@ -173,7 +173,7 @@ Mafra.ProWine/
 ```csharp
 public class Event : Entity<Guid>
 {
-    public string Name { get; set; }              // "Pro Wine 2026"
+    public string Name { get; set; }              // "FlowHub 2026"
     public string Code { get; set; }              // "PW2026"
     public DateTime StartDate { get; set; }
     public DateTime EndDate { get; set; }
@@ -350,10 +350,10 @@ public class Transaction : Entity<Guid>
 
 ## 5. SignalR Hub - Notificações em Tempo Real
 
-### ProWineHub
+### FlowHubHub
 
 ```csharp
-public class ProWineHub : Hub
+public class FlowHubHub : Hub
 {
     // Grupos por tipo de usuário
     public async Task JoinOperatorGroup() 
@@ -599,17 +599,17 @@ sequenceDiagram
 ### 9.2 Políticas de Autorização
 
 ```csharp
-public static class ProWinePermissions
+public static class FlowHubPermissions
 {
-    public const string ViewOwnKits = "ProWine:ViewOwnKits";
-    public const string CreateServiceRequest = "ProWine:CreateServiceRequest";
-    public const string ManageServiceRequests = "ProWine:ManageServiceRequests";
-    public const string ScanQRCode = "ProWine:ScanQRCode";
-    public const string ManageKits = "ProWine:ManageKits";
-    public const string ManageEquipment = "ProWine:ManageEquipment";
-    public const string ViewReports = "ProWine:ViewReports";
-    public const string ManageEvents = "ProWine:ManageEvents";
-    public const string ManageCustomers = "ProWine:ManageCustomers";
+    public const string ViewOwnKits = "FlowHub:ViewOwnKits";
+    public const string CreateServiceRequest = "FlowHub:CreateServiceRequest";
+    public const string ManageServiceRequests = "FlowHub:ManageServiceRequests";
+    public const string ScanQRCode = "FlowHub:ScanQRCode";
+    public const string ManageKits = "FlowHub:ManageKits";
+    public const string ManageEquipment = "FlowHub:ManageEquipment";
+    public const string ViewReports = "FlowHub:ViewReports";
+    public const string ManageEvents = "FlowHub:ManageEvents";
+    public const string ManageCustomers = "FlowHub:ManageCustomers";
 }
 ```
 
@@ -662,7 +662,7 @@ public static class ProWinePermissions
 
 ### 11.2 Implementação Backend
 
-- Resource files (.resx) no projeto `Mafra.ProWine.Localization`
+- Resource files (.resx) no projeto `Mafra.FlowHub.Localization`
 - Middleware de localização configurado via `Accept-Language` header
 - DTOs com propriedade `Dictionary<string, string> Translations`
 

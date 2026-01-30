@@ -1,6 +1,6 @@
 ---
-name: Pro Wine POC
-overview: Desenvolver uma Proof of Concept (POC) do Pro Wine com 4 interfaces funcionais (Expositor, Operador, Cozinha, Administrador), dados mockados, autenticação simplificada e foco em demonstração visual das funcionalidades principais.
+name: FlowHub POC
+overview: Desenvolver uma Proof of Concept (POC) do FlowHub com 4 interfaces funcionais (Expositor, Operador, Cozinha, Administrador), dados mockados, autenticação simplificada e foco em demonstração visual das funcionalidades principais.
 todos:
   - id: poc_setup
     content: "Setup inicial: criar projetos backend (.NET 8) e frontend (React/Vue), configurar Git"
@@ -35,11 +35,11 @@ todos:
 isProject: false
 ---
 
-# Pro Wine - Plano POC (Proof of Concept)
+# FlowHub - Plano POC (Proof of Concept)
 
 ## Objetivo
 
-Criar uma versão demonstrativa do Pro Wine para validação do cliente, focada em **experiência visual e fluxos principais**, sem complexidade de integrações e infraestrutura completa.
+Criar uma versão demonstrativa do FlowHub para validação do cliente, focada em **experiência visual e fluxos principais**, sem complexidade de integrações e infraestrutura completa.
 
 ---
 
@@ -56,7 +56,7 @@ Criar uma versão demonstrativa do Pro Wine para validação do cliente, focada 
 
 **✅ Dados Mockados:**
 
-- 1 evento pré-configurado (Pro Wine 2026)
+- 1 evento pré-configurado (FlowHub 2026)
 - 10-15 clientes fictícios com kits comprados
 - 50 equipamentos (champanheiras/cuspideiras) com QRCodes
 - 20-30 solicitações de reposição em diferentes status
@@ -150,7 +150,7 @@ graph TB
   "events": [
     {
       "id": "evt-001",
-      "name": "Pro Wine 2026",
+      "name": "FlowHub 2026",
       "code": "PW2026",
       "startDate": "2026-03-15",
       "endDate": "2026-03-18",
@@ -459,16 +459,16 @@ graph TB
 ## 7. Estrutura de Projeto POC
 
 ```
-ProWine.POC/
+FlowHub.POC/
 ├── backend/
-│   ├── ProWine.POC.API/
+│   ├── FlowHub.POC.API/
 │   │   ├── Controllers/
 │   │   │   ├── CustomersController.cs
 │   │   │   ├── EquipmentsController.cs
 │   │   │   ├── ServiceRequestsController.cs
 │   │   │   └── LabelsController.cs
 │   │   ├── Hubs/
-│   │   │   └── ProWineHub.cs
+│   │   │   └── FlowHubHub.cs
 │   │   ├── Models/
 │   │   │   └── (DTOs mockados)
 │   │   ├── Services/
@@ -477,7 +477,7 @@ ProWine.POC/
 │   │   │   └── LabelService.cs
 │   │   └── Data/
 │   │       └── mock-data.json
-│   └── ProWine.POC.API.csproj
+│   └── FlowHub.POC.API.csproj
 │
 ├── frontend/
 │   ├── src/

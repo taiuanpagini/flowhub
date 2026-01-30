@@ -5,11 +5,11 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { AuthProvider } from './context/AuthContext';
 import AppRoutes from './routes/AppRoutes';
 import i18n from './i18n/i18n';
-import proWineTheme from './theme/theme';
+import flowhubTheme from './theme/theme';
 
 function App() {
   return (
-    <ThemeProvider theme={proWineTheme}>
+    <ThemeProvider theme={flowhubTheme}>
       <CssBaseline />
       <I18nextProvider i18n={i18n}>
         <BrowserRouter>

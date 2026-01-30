@@ -1,6 +1,6 @@
 import * as signalR from '@microsoft/signalr';
 
-const HUB_URL = import.meta.env.VITE_HUB_URL || 'http://localhost:5000/hubs/prowine';
+const HUB_URL = import.meta.env.VITE_HUB_URL || 'http://localhost:5024/hubs/flowhub';
 
 class SignalRService {
   constructor() {

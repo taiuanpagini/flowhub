@@ -1,4 +1,4 @@
-# ProWine POC - Sistema de Gestão de Equipamentos para Eventos
+# FlowHub - Sistema de Gestão de Equipamentos para Eventos
 
 Sistema completo de gestão de equipamentos para eventos, com foco em rastreamento via QR Code, controle de estoque, solicitações de serviço e comunicação em tempo real.
 
@@ -23,7 +23,7 @@ Sistema completo de gestão de equipamentos para eventos, com foco em rastreamen
 
 ## 🎯 Sobre o Projeto
 
-O **ProWine POC** é uma solução desenvolvida para gerenciar equipamentos (champanheiras e cuspideiras) em eventos de degustação de vinhos. O sistema utiliza QR Codes para rastreamento de equipamentos e oferece dashboards específicos para diferentes perfis de usuários, incluindo expositores, operadores, supervisores, garçons e administradores.
+O **FlowHub** é uma solução desenvolvida para gerenciar equipamentos (champanheiras e cuspideiras) em eventos de degustação de vinhos. O sistema utiliza QR Codes para rastreamento de equipamentos e oferece dashboards específicos para diferentes perfis de usuários, incluindo expositores, operadores, supervisores, garçons e administradores.
 
 ### Características Principais
 
@@ -149,7 +149,7 @@ O **ProWine POC** é uma solução desenvolvida para gerenciar equipamentos (cha
 
 ```bash
 git clone <url-do-repositorio>
-cd ProWine
+cd FlowHub
 ```
 
 ### 2. Instale Dependências do Backend
@@ -208,7 +208,7 @@ npm run dev
 ## 📁 Estrutura do Projeto
 
 ```
-ProWine/
+FlowHub/
 ├── backend/
 │   ├── Controllers/          # Controladores da API
 │   │   ├── AuthController.cs
@@ -218,7 +218,7 @@ ProWine/
 │   ├── Data/
 │   │   └── mock-data.json    # Dados mockados
 │   ├── Hubs/
-│   │   └── ProWineHub.cs     # Hub SignalR
+│   │   └── FlowHubHub.cs     # Hub SignalR
 │   ├── Models/               # Modelos de dados
 │   │   ├── Customer.cs
 │   │   ├── Equipment.cs
@@ -474,13 +474,13 @@ O sistema utiliza **SignalR** para comunicação bidirecional entre servidor e c
 ```csharp
 builder.Services.AddSignalR();
 // ...
-app.MapHub<ProWineHub>("/prowineHub");
+app.MapHub<FlowHubHub>("/hubs/flowhub");
 ```
 
 **Frontend** (`signalr.service.js`):
 ```javascript
 const connection = new HubConnectionBuilder()
-  .withUrl(`${API_URL}/prowineHub`)
+  .withUrl(`${API_URL}/hubs/flowhub`)
   .withAutomaticReconnect()
   .build();
 ```

@@ -1,6 +1,6 @@
 {
   "common": {
-    "appName": "Pro Wine",
+    "appName": "FlowHub",
     "logout": "Logout",
     "save": "Save",
     "cancel": "Cancel",
@@ -16,7 +16,7 @@
     "warning": "Warning"
   },
   "login": {
-    "title": "Pro Wine",
+    "title": "FlowHub",
     "subtitle": "Event Management System",
     "username": "Username",
     "password": "Password",

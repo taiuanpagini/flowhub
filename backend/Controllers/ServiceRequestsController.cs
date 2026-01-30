@@ -1,19 +1,19 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
-using ProWine.POC.API.Models;
-using ProWine.POC.API.Services;
-using ProWine.POC.API.Hubs;
+using FlowHub.API.Models;
+using FlowHub.API.Services;
+using FlowHub.API.Hubs;
 
-namespace ProWine.POC.API.Controllers;
+namespace FlowHub.API.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
 public class ServiceRequestsController : ControllerBase
 {
     private readonly MockDataService _mockDataService;
-    private readonly IHubContext<ProWineHub> _hubContext;
+    private readonly IHubContext<FlowHubHub> _hubContext;
 
-    public ServiceRequestsController(MockDataService mockDataService, IHubContext<ProWineHub> hubContext)
+    public ServiceRequestsController(MockDataService mockDataService, IHubContext<FlowHubHub> hubContext)
     {
         _mockDataService = mockDataService;
         _hubContext = hubContext;

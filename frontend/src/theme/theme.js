@@ -1,7 +1,7 @@
 import { createTheme } from '@mui/material/styles';
 
-// Paleta de cores Pro Wine
-const proWineTheme = createTheme({
+// Paleta de cores FlowHub
+const flowhubTheme = createTheme({
   palette: {
     primary: {
       main: '#B61E3F', // Vermelho vinho principal
@@ -204,4 +204,4 @@ const proWineTheme = createTheme({
   },
 });
 
-export default proWineTheme;
+export default flowhubTheme;

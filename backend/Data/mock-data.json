@@ -20,7 +20,7 @@
       "Username": "operador",
       "Password": "123456",
       "Name": "Maria Santos",
-      "Email": "maria.santos@prowine.com",
+      "Email": "maria.santos@flowhub.com",
       "Role": "Operador",
       "Permissions": [
         "scan_qrcode",
@@ -35,7 +35,7 @@
       "Username": "supervisor",
       "Password": "123456",
       "Name": "Carlos Pereira",
-      "Email": "carlos.pereira@prowine.com",
+      "Email": "carlos.pereira@flowhub.com",
       "Role": "Supervisor_Cozinha",
       "Permissions": [
         "view_all_requests",
@@ -50,7 +50,7 @@
       "Username": "garcom",
       "Password": "123456",
       "Name": "Ana Costa",
-      "Email": "ana.costa@prowine.com",
+      "Email": "ana.costa@flowhub.com",
       "Role": "Garcom",
       "Permissions": [
         "view_my_requests",
@@ -64,7 +64,7 @@
       "Username": "admin",
       "Password": "123456",
       "Name": "Roberto Admin",
-      "Email": "roberto.admin@prowine.com",
+      "Email": "roberto.admin@flowhub.com",
       "Role": "Administrador",
       "Permissions": [
         "manage_events",
@@ -382,7 +382,7 @@
   "Events": [
     {
       "Id": "evt-001",
-      "Name": "Pro Wine 2026",
+      "Name": "FlowHub 2026",
       "Code": "PW2026",
       "StartDate": "2026-03-15T00:00:00Z",
       "EndDate": "2026-03-18T23:59:59Z",

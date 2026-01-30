@@ -92,7 +92,7 @@ export default function Login() {
           {/* Header */}
           <Box sx={{ textAlign: 'center', mb: 4, mt: 2 }}>
             <Typography variant="h3" component="h1" gutterBottom sx={{ fontWeight: 700, color: 'primary.main' }}>
-              🍷 {t('login.title')}
+              🚀 {t('login.title')}
             </Typography>
             <Typography variant="subtitle1" color="text.secondary">
               {t('login.subtitle')}
@@ -215,7 +215,7 @@ export default function Login() {
           {/* Footer */}
           <Box sx={{ mt: 4, textAlign: 'center' }}>
             <Typography variant="caption" color="text.secondary">
-              Pro Wine POC © 2026
+              FlowHub © 2026
             </Typography>
           </Box>
         </Paper>
