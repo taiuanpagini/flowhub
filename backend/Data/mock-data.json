@@ -1,0 +1,393 @@
+{
+  "Users": [
+    {
+      "Id": "user-001",
+      "Username": "expositor",
+      "Password": "123456",
+      "Name": "Jo\u00E3o Silva",
+      "Email": "joao.silva@vinicolaaurora.com.br",
+      "Role": "Expositor",
+      "Permissions": [
+        "view_dashboard",
+        "request_service",
+        "view_equipments"
+      ],
+      "CustomerId": "cust-001",
+      "RedirectTo": "/expositor/dashboard"
+    },
+    {
+      "Id": "user-002",
+      "Username": "operador",
+      "Password": "123456",
+      "Name": "Maria Santos",
+      "Email": "maria.santos@prowine.com",
+      "Role": "Operador",
+      "Permissions": [
+        "scan_qrcode",
+        "register_pickup",
+        "register_return"
+      ],
+      "CustomerId": null,
+      "RedirectTo": "/operador/scanner"
+    },
+    {
+      "Id": "user-003",
+      "Username": "supervisor",
+      "Password": "123456",
+      "Name": "Carlos Pereira",
+      "Email": "carlos.pereira@prowine.com",
+      "Role": "Supervisor_Cozinha",
+      "Permissions": [
+        "view_all_requests",
+        "assign_waiter",
+        "manage_kitchen"
+      ],
+      "CustomerId": null,
+      "RedirectTo": "/cozinha/painel"
+    },
+    {
+      "Id": "user-004",
+      "Username": "garcom",
+      "Password": "123456",
+      "Name": "Ana Costa",
+      "Email": "ana.costa@prowine.com",
+      "Role": "Garcom",
+      "Permissions": [
+        "view_my_requests",
+        "update_request_status"
+      ],
+      "CustomerId": null,
+      "RedirectTo": "/cozinha/minhas-solicitacoes"
+    },
+    {
+      "Id": "user-005",
+      "Username": "admin",
+      "Password": "123456",
+      "Name": "Roberto Admin",
+      "Email": "roberto.admin@prowine.com",
+      "Role": "Administrador",
+      "Permissions": [
+        "manage_events",
+        "manage_customers",
+        "manage_equipments",
+        "manage_users",
+        "generate_labels"
+      ],
+      "CustomerId": null,
+      "RedirectTo": "/admin/dashboard"
+    }
+  ],
+  "Customers": [
+    {
+      "Id": "cust-a55c5fbb",
+      "CNPJ": "23409536000611",
+      "CompanyName": "Vin\u00EDcola Exemplo 1",
+      "StandNumber": "A496",
+      "PurchasedKitsQuantity": 3,
+      "AvailableChampagneQuantity": 6,
+      "PickedUpChampagneQuantity": 0,
+      "AvailableSpittoonQuantity": 6,
+      "PickedUpSpittoonQuantity": 0,
+      "BadgeQRCode": "BADGE-EEBD813A",
+      "QrCode": "BADGE-EEBD813A",
+      "EventId": "evt-001"
+    },
+    {
+      "Id": "cust-6c9a03b0",
+      "CNPJ": "98837064000791",
+      "CompanyName": "Vin\u00EDcola Exemplo 2",
+      "StandNumber": "B510",
+      "PurchasedKitsQuantity": 2,
+      "AvailableChampagneQuantity": 4,
+      "PickedUpChampagneQuantity": 0,
+      "AvailableSpittoonQuantity": 4,
+      "PickedUpSpittoonQuantity": 0,
+      "BadgeQRCode": "BADGE-8EDE6CD9",
+      "QrCode": "BADGE-8EDE6CD9",
+      "EventId": "evt-001"
+    },
+    {
+      "Id": "cust-81991498",
+      "CNPJ": "72849701000249",
+      "CompanyName": "Vin\u00EDcola Exemplo 3",
+      "StandNumber": "C565",
+      "PurchasedKitsQuantity": 1,
+      "AvailableChampagneQuantity": 2,
+      "PickedUpChampagneQuantity": 0,
+      "AvailableSpittoonQuantity": 2,
+      "PickedUpSpittoonQuantity": 0,
+      "BadgeQRCode": "BADGE-420B3F20",
+      "QrCode": "BADGE-420B3F20",
+      "EventId": "evt-001"
+    }
+  ],
+  "Equipments": [
+    {
+      "Id": "equip-500e5c0f",
+      "EquipmentNumber": "CHAMPAGNE-001",
+      "Type": "Champagne",
+      "QRCode": "QR-CHAMPAGNE-001",
+      "Status": "Available",
+      "EventId": "evt-001",
+      "CurrentCustomerId": null,
+      "PickupDate": null,
+      "ReturnDate": null
+    },
+    {
+      "Id": "equip-042385a7",
+      "EquipmentNumber": "CHAMPAGNE-003",
+      "Type": "Champagne",
+      "QRCode": "QR-CHAMPAGNE-003",
+      "Status": "Available",
+      "EventId": "evt-001",
+      "CurrentCustomerId": null,
+      "PickupDate": null,
+      "ReturnDate": null
+    },
+    {
+      "Id": "equip-a9c49018",
+      "EquipmentNumber": "CHAMPAGNE-005",
+      "Type": "Champagne",
+      "QRCode": "QR-CHAMPAGNE-005",
+      "Status": "Available",
+      "EventId": "evt-001",
+      "CurrentCustomerId": null,
+      "PickupDate": null,
+      "ReturnDate": null
+    },
+    {
+      "Id": "equip-f463782a",
+      "EquipmentNumber": "CHAMPAGNE-007",
+      "Type": "Champagne",
+      "QRCode": "QR-CHAMPAGNE-007",
+      "Status": "Available",
+      "EventId": "evt-001",
+      "CurrentCustomerId": null,
+      "PickupDate": null,
+      "ReturnDate": null
+    },
+    {
+      "Id": "equip-aa331512",
+      "EquipmentNumber": "CHAMPAGNE-009",
+      "Type": "Champagne",
+      "QRCode": "QR-CHAMPAGNE-009",
+      "Status": "Available",
+      "EventId": "evt-001",
+      "CurrentCustomerId": null,
+      "PickupDate": null,
+      "ReturnDate": null
+    },
+    {
+      "Id": "equip-244a6144",
+      "EquipmentNumber": "CHAMPAGNE-011",
+      "Type": "Champagne",
+      "QRCode": "QR-CHAMPAGNE-011",
+      "Status": "Available",
+      "EventId": "evt-001",
+      "CurrentCustomerId": null,
+      "PickupDate": null,
+      "ReturnDate": null
+    },
+    {
+      "Id": "equip-22b8a79c",
+      "EquipmentNumber": "CHAMPAGNE-013",
+      "Type": "Champagne",
+      "QRCode": "QR-CHAMPAGNE-013",
+      "Status": "Available",
+      "EventId": "evt-001",
+      "CurrentCustomerId": null,
+      "PickupDate": null,
+      "ReturnDate": null
+    },
+    {
+      "Id": "equip-e331f1a1",
+      "EquipmentNumber": "CHAMPAGNE-015",
+      "Type": "Champagne",
+      "QRCode": "QR-CHAMPAGNE-015",
+      "Status": "Available",
+      "EventId": "evt-001",
+      "CurrentCustomerId": null,
+      "PickupDate": null,
+      "ReturnDate": null
+    },
+    {
+      "Id": "equip-f1fff55a",
+      "EquipmentNumber": "CHAMPAGNE-017",
+      "Type": "Champagne",
+      "QRCode": "QR-CHAMPAGNE-017",
+      "Status": "Available",
+      "EventId": "evt-001",
+      "CurrentCustomerId": null,
+      "PickupDate": null,
+      "ReturnDate": null
+    },
+    {
+      "Id": "equip-5467014c",
+      "EquipmentNumber": "CHAMPAGNE-019",
+      "Type": "Champagne",
+      "QRCode": "QR-CHAMPAGNE-019",
+      "Status": "Available",
+      "EventId": "evt-001",
+      "CurrentCustomerId": null,
+      "PickupDate": null,
+      "ReturnDate": null
+    }
+  ],
+  "ServiceRequests": [
+    {
+      "Id": "sr-001",
+      "CustomerId": "cust-001",
+      "StandNumber": "A123",
+      "RequestedGlassQuantity": 25,
+      "Status": "Completed",
+      "RequestedAt": "2026-03-16T14:30:00Z",
+      "EventId": "evt-001",
+      "AssignedWaiterUserId": "user-004",
+      "PickedUpAt": null,
+      "CompletedAt": "2026-01-30T13:31:49.8546389Z"
+    },
+    {
+      "Id": "sr-002",
+      "CustomerId": "cust-002",
+      "StandNumber": "B045",
+      "RequestedGlassQuantity": 50,
+      "Status": "Completed",
+      "RequestedAt": "2026-03-16T13:15:00Z",
+      "EventId": "evt-001",
+      "AssignedWaiterUserId": "user-004",
+      "PickedUpAt": "2026-03-16T13:20:00Z",
+      "CompletedAt": "2026-01-30T13:07:24.2813949Z"
+    },
+    {
+      "Id": "sr-003",
+      "CustomerId": "cust-003",
+      "StandNumber": "C012",
+      "RequestedGlassQuantity": 25,
+      "Status": "Completed",
+      "RequestedAt": "2026-03-16T12:00:00Z",
+      "EventId": "evt-001",
+      "AssignedWaiterUserId": "user-004",
+      "PickedUpAt": "2026-03-16T12:05:00Z",
+      "CompletedAt": "2026-03-16T12:35:00Z"
+    },
+    {
+      "Id": "sr-5f27a634",
+      "CustomerId": "cust-001",
+      "StandNumber": "A123",
+      "RequestedGlassQuantity": 25,
+      "Status": "Completed",
+      "RequestedAt": "2026-01-30T13:05:02.7287344Z",
+      "EventId": "evt-001",
+      "AssignedWaiterUserId": "user-004",
+      "PickedUpAt": null,
+      "CompletedAt": "2026-01-30T13:31:52.6407505Z"
+    },
+    {
+      "Id": "sr-2b8fd7a5",
+      "CustomerId": "cust-001",
+      "StandNumber": "A123",
+      "RequestedGlassQuantity": 25,
+      "Status": "Completed",
+      "RequestedAt": "2026-01-30T13:21:52.3628868Z",
+      "EventId": "evt-001",
+      "AssignedWaiterUserId": "user-004",
+      "PickedUpAt": null,
+      "CompletedAt": "2026-01-30T13:31:54.207481Z"
+    },
+    {
+      "Id": "sr-34889a13",
+      "CustomerId": "cust-001",
+      "StandNumber": "A123",
+      "RequestedGlassQuantity": 25,
+      "Status": "Completed",
+      "RequestedAt": "2026-01-30T13:22:32.2451839Z",
+      "EventId": "evt-001",
+      "AssignedWaiterUserId": "user-004",
+      "PickedUpAt": null,
+      "CompletedAt": "2026-01-30T13:31:55.5649383Z"
+    },
+    {
+      "Id": "sr-b500d79d",
+      "CustomerId": "cust-001",
+      "StandNumber": "A123",
+      "RequestedGlassQuantity": 25,
+      "Status": "Completed",
+      "RequestedAt": "2026-01-30T13:28:08.4457442Z",
+      "EventId": "evt-001",
+      "AssignedWaiterUserId": "user-004",
+      "PickedUpAt": null,
+      "CompletedAt": "2026-01-30T13:31:57.3199411Z"
+    },
+    {
+      "Id": "sr-f4774ddc",
+      "CustomerId": "cust-001",
+      "StandNumber": "A123",
+      "RequestedGlassQuantity": 100,
+      "Status": "Completed",
+      "RequestedAt": "2026-01-30T14:42:29.1613889Z",
+      "EventId": "evt-001",
+      "AssignedWaiterUserId": "user-004",
+      "PickedUpAt": null,
+      "CompletedAt": "2026-01-30T14:43:39.0905648Z"
+    },
+    {
+      "Id": "sr-ffe62819",
+      "CustomerId": "cust-001",
+      "StandNumber": "A123",
+      "RequestedGlassQuantity": 25,
+      "Status": "Completed",
+      "RequestedAt": "2026-01-30T14:57:15.7103752Z",
+      "EventId": "evt-001",
+      "AssignedWaiterUserId": "user-004",
+      "PickedUpAt": null,
+      "CompletedAt": "2026-01-30T14:59:56.4800978Z"
+    },
+    {
+      "Id": "sr-077097f1",
+      "CustomerId": "cust-001",
+      "StandNumber": "A123",
+      "RequestedGlassQuantity": 25,
+      "Status": "Completed",
+      "RequestedAt": "2026-01-30T15:03:51.3608944Z",
+      "EventId": "evt-001",
+      "AssignedWaiterUserId": "user-004",
+      "PickedUpAt": null,
+      "CompletedAt": "2026-01-30T15:04:02.8670469Z"
+    },
+    {
+      "Id": "sr-24d606aa",
+      "CustomerId": "cust-001",
+      "StandNumber": "A123",
+      "RequestedGlassQuantity": 50,
+      "Status": "Pending",
+      "RequestedAt": "2026-01-30T15:05:33.3164396Z",
+      "EventId": "evt-001",
+      "AssignedWaiterUserId": null,
+      "PickedUpAt": null,
+      "CompletedAt": null
+    },
+    {
+      "Id": "sr-0ed0cabd",
+      "CustomerId": "cust-001",
+      "StandNumber": "A123",
+      "RequestedGlassQuantity": 50,
+      "Status": "Pending",
+      "RequestedAt": "2026-01-30T15:05:41.729005Z",
+      "EventId": "evt-001",
+      "AssignedWaiterUserId": null,
+      "PickedUpAt": null,
+      "CompletedAt": null
+    }
+  ],
+  "Events": [
+    {
+      "Id": "evt-001",
+      "Name": "Pro Wine 2026",
+      "Code": "PW2026",
+      "StartDate": "2026-03-15T00:00:00Z",
+      "EndDate": "2026-03-18T23:59:59Z",
+      "Location": "Expo Center Norte - S\u00E3o Paulo",
+      "Status": "Active"
+    }
+  ]
+}
