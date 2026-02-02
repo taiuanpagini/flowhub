@@ -46,8 +46,17 @@ export default function OperadorScanner() {
   }, []);
 
   useEffect(() => {
-    if (showCamera && scannerRef.current && !qrScannerRef.current) {
-      initScanner();
+    if (showCamera && scannerRef.current) {      
+      if (qrScannerRef.current) {
+        qrScannerRef.current.clear().catch(console.error);
+        qrScannerRef.current = null;
+      }
+      
+      const timer = setTimeout(() => {
+        initScanner();
+      }, 100);
+      
+      return () => clearTimeout(timer);
     }
     
     return () => {
@@ -56,7 +65,7 @@ export default function OperadorScanner() {
         qrScannerRef.current = null;
       }
     };
-  }, [showCamera]);
+  }, [showCamera, scanStep]);
 
   const loadData = async () => {
     try {
@@ -74,18 +83,24 @@ export default function OperadorScanner() {
   };
 
   const initScanner = () => {
-    const scanner = new Html5QrcodeScanner(
-      "qr-reader",
-      { 
-        fps: 10, 
-        qrbox: { width: 250, height: 250 },
-        aspectRatio: 1.0,
-      },
-      false
-    );
+    try {
+      const scanner = new Html5QrcodeScanner(
+        "qr-reader",
+        { 
+          fps: 10, 
+          qrbox: { width: 250, height: 250 },
+          aspectRatio: 1.0,
+          rememberLastUsedCamera: true,
+        },
+        false
+      );
 
-    scanner.render(onScanSuccess, onScanError);
-    qrScannerRef.current = scanner;
+      scanner.render(onScanSuccess, onScanError);
+      qrScannerRef.current = scanner;
+    } catch (error) {
+      console.error('Error initializing scanner:', error);
+      setScanError('Erro ao inicializar a câmera. Verifique as permissões do navegador.');
+    }
   };
 
   const onScanSuccess = (decodedText) => {
@@ -114,14 +129,18 @@ export default function OperadorScanner() {
     }
 
     setScannedCustomer(customer);
-    stopCamera();
 
     if (currentFlow === 'pickup') {
-      // Fluxo de retirada: agora escaneia o equipamento
-      setScanStep('equipment');
-      setShowCamera(true);
+      // Fluxo de retirada: para a câmera e depois inicia novamente para o equipamento
+      stopCamera();
+      // Aguarda um pouco para garantir que a câmera foi parada antes de reiniciar
+      setTimeout(() => {
+        setScanStep('equipment');
+        setShowCamera(true);
+      }, 100);
     } else if (currentFlow === 'return') {
       // Fluxo de devolução: mostra equipamentos do cliente
+      stopCamera();
       setScanStep('select-return');
     }
   };
@@ -344,6 +363,10 @@ export default function OperadorScanner() {
               </Alert>
             )}
 
+            <Alert severity="info" sx={{ mb: 2 }}>
+              <strong>💡 Dica:</strong> Certifique-se de permitir o acesso à câmera quando solicitado pelo navegador.
+            </Alert>
+
             <Box 
               id="qr-reader" 
               ref={scannerRef}
@@ -406,8 +429,11 @@ export default function OperadorScanner() {
                   fullWidth
                   startIcon={<CameraIcon />}
                   onClick={() => {
-                    setScanStep('equipment');
-                    setShowCamera(true);
+                    // Aguarda um pouco antes de abrir a câmera
+                    setTimeout(() => {
+                      setScanStep('equipment');
+                      setShowCamera(true);
+                    }, 100);
                   }}
                   sx={{ mb: 3 }}
                 >
